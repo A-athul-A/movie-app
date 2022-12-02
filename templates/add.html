@@ -1,0 +1,17 @@
+<title>Add</title>
+{% extends 'base.html' %}
+{% block body %}
+<div class="container" style="margin-top:5rem;margin-left:35rem;">
+    <div class="row">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Enter movie name"><br><br>
+            <input type="text" name="desc" placeholder="Description"><br><br>
+            <input type="text" name="year" placeholder="year"><br><br>
+            <input type="file" name="img">
+            <input type="submit" value="submit" class="btn-grad" href="/" style="width:7rem;">
+            <a button type="button" class="btn-grad" href="/" style="width:7rem;">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
